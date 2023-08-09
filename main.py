@@ -1,16 +1,11 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+link = "https://icanhazip.com/"
+link2 = "https://browser-info.ru/"
+responce = requests.get(link).text
+responce2 = requests.get(link2).text
+print(responce)
+print(responce2)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+with open("l.html", "w", encoding="utf-8") as file:
+    file.write(responce2)
